@@ -1,0 +1,13 @@
+#importing all the necessary packages
+import pickle as pkl
+import csv
+import pandas as pd
+
+#Converting pickle file to csv
+with open("file.pkl", "rb") as f:
+    object = pkl.load(f)
+df = pd.DataFrame(object)
+df.to_csv(r'file.csv')
+
+
+
