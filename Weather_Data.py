@@ -13,9 +13,6 @@ url = "https://api.openweathermap.org/data/2.5/onecall?lat=%s&lon=%s&appid=%s&un
 response = requests.get(url)
 print(response.text)
 
-# Serializing json
-json_object = json.dumps(response.text, indent=4)
-
 # Writing to sample.json
 file1 = open('response.json', 'w')
 file1.write(response.text)
